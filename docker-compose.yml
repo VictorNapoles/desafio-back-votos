@@ -17,6 +17,7 @@ services:
     restart: unless-stopped
 
   redis:
+    container_name: redis_container
     image: redis
     command: redis-server
     ports:
