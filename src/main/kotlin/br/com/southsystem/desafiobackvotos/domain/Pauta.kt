@@ -8,8 +8,12 @@ import org.springframework.data.relational.core.mapping.Table
 data class Pauta(
 
     @Id
-    val id: Long,
+    val id: Long? = null,
 
     @Column
     val texto: String,
-)
+){
+    override fun toString(): String {
+        return "Pauta(id=$id, texto='$texto')"
+    }
+}
